@@ -22,7 +22,7 @@ class PokemonsController < ApplicationController
   def generate_pokemon
     name = Faker::Name.first_name
     species = Faker::Games::Pokemon.name
-    Pokemon.create(nickname: name, species: species, trainer_id: @trainer.id)
+    Pokemon.create(nickname: name, species: species, trainer: @trainer)
   end
 
   def strong_params
