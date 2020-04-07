@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   post "/pokemons", to: "pokemons#create"
-  delete "/pokemons/:id", to: "pokemons#delete"
+  delete "/pokemons/:id", to: "pokemons#destroy"
 
   get "/trainers", to: "trainers#index"
   get "/trainers/:id", to: "trainers#show"
