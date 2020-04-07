@@ -6,7 +6,7 @@ class PokemonsController < ApplicationController
       pokemon = generate_pokemon
       render json: pokemon
     else
-      render json: { error: "Can't create pokemon" }
+      render json: { error: "Can't create, team is full" }, status: :method_not_allowed
     end
   end
 
